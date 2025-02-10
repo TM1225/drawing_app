@@ -13,8 +13,7 @@ public class Line extends Shape {
     // 描画メソッド
     @Override
     public void draw() {
-        // 始点と終点を表示
-        System.out.println("Line: (" + start + " から " + end + ")");
+        System.out.println("Line: (" + start + " to " + end + ")");
     }
 
     // 直線の長さを計算して返すメソッド

@@ -19,7 +19,7 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        // Rectangleの描画処理
+        System.out.println("Rectangle: 幅 = " + width + ", 高さ = " + height);
     }
 
     @Override

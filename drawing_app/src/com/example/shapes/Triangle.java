@@ -14,7 +14,7 @@ public class Triangle extends Polygon {
 
     @Override
     public void draw() {
-    	System.out.println("Triangle: (" + p1 + "), (" + p2 + "), (" + p3 + ") ");
+        System.out.println("Triangle: (" + p1 + "), (" + p2 + "), (" + p3 + ")");
     }
 
     @Override

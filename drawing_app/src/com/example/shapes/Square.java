@@ -7,6 +7,7 @@ public class Square extends Rectangle {
 
     @Override
     public void draw() {
-        System.out.println("Square: side = " + getWidth());  // getWidth()を使用
+        // 正方形の描画メッセージだけ表示
+        System.out.println("Square: 辺の長さ = " + getWidth());
     }
 }

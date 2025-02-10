@@ -13,7 +13,6 @@ public class Point extends Shape {
     // 描画メソッド
     @Override
     public void draw() {
-        // 座標をコンソールに出力する
         System.out.println("Point: (" + x + ", " + y + ") / 点: (" + x + ", " + y + ")");
     }
 
