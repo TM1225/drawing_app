@@ -9,6 +9,7 @@ import com.example.shapes.Triangle;
 
 public class DrawingApp {
     public static void main(String[] args) {
+        // 図形のオブジェクトを作成
         Circle circle = new Circle(5.0);
         Triangle triangle = new Triangle(0, 0, 3, 0, 3, 4);
         Rectangle rectangle = new Rectangle(6.0, 2.0);
@@ -33,3 +34,4 @@ public class DrawingApp {
         line.draw();
     }
 }
+
