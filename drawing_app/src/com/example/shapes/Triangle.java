@@ -1,40 +1,31 @@
 package com.example.shapes;
 
-/**
- * 三角形（Triangle）を表すクラス
- * `Polygon` クラスを継承し、三角形特有の処理を実装する
- */
 public class Triangle extends Polygon {
-    private final double base;  // 底辺をfinalに変更
-    private final double height; // 高さをfinalに変更
+    private final Point p1;
+    private final Point p2;
+    private final Point p3;
 
-    /**
-     * コンストラクタ
-     * @param color 三角形の色
-     * @param base 底辺の長さ
-     * @param height 高さの長さ
-     */
-    public Triangle(String color, double base, double height) {
-        super(color); // `Polygon` クラスのコンストラクタを呼び出し、色を設定
-        this.base = base;
-        this.height = height;
+    public Triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+        super();
+        this.p1 = new Point(x1, y1);
+        this.p2 = new Point(x2, y2);
+        this.p3 = new Point(x3, y3);
     }
 
-    /**
-     * `draw()` メソッドの実装
-     * 三角形の情報を出力する
-     */
     @Override
     public void draw() {
-        System.out.println("Drawing a Triangle with color: " + color + ", base: " + base + ", height: " + height);
+    	System.out.println("Triangle: (" + p1 + "), (" + p2 + "), (" + p3 + ") / 三角形: (" + p1 + "), (" + p2 + "), (" + p3 + ")");
     }
 
-    /**
-     * 三角形の面積を計算する
-     * @return 面積（(底辺 × 高さ) / 2）
-     */
     @Override
-    public double getArea() {
-        return (base * height) / 2;
+    public double getPerimeter() {
+        double side1 = distance(p1, p2);
+        double side2 = distance(p2, p3);
+        double side3 = distance(p3, p1);
+        return side1 + side2 + side3;
+    }
+
+    private double distance(Point a, Point b) {
+        return Math.sqrt(Math.pow(b.getX() - a.getX(), 2) + Math.pow(b.getY() - a.getY(), 2));
     }
 }

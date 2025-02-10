@@ -1,39 +1,33 @@
 package com.example.shapes;
 
-/**
- * 長方形（Rectangle）を表すクラス
- * `Polygon` クラスを継承し、長方形特有の処理を実装する
- */
-public class Rectangle extends Polygon {
-    private final double width;
-    private final double height;
+public class Rectangle extends Shape {
+    protected final double width;  // 幅
+    protected final double height; // 高さ
 
-    /**
-     * コンストラクタ
-     * @param color 長方形の色
-     * @param width 幅
-     * @param height 高さ
-     */
-    public Rectangle(String color, double width, double height) {
-        super(color);
+    public Rectangle(double width, double height) {
         this.width = width;
         this.height = height;
     }
 
-    /**
-     * `draw()` メソッドの実装
-     */
-    @Override
-    public void draw() {
-        System.out.println("Drawing a Rectangle with color: " + color + ", width: " + width + ", height: " + height);
+    // 幅を取得するゲッター
+    public double getWidth() {
+        return width;
     }
 
-    /**
-     * 長方形の面積を計算する
-     * @return 面積（幅 × 高さ）
-     */
+    // 高さを取得するゲッター
+    public double getHeight() {
+        return height;
+    }
+
+    // 周囲長を計算するメソッド
     @Override
-    public double getArea() {
-        return width * height;
+    public double getPerimeter() {
+        return 2 * (width + height);
+    }
+
+    // 描画メソッドの実装
+    @Override
+    public void draw() {
+    	 System.out.println("Rectangle: width = " + width + ", height = " + height + " / 長方形: 幅 = " + width + ", 高さ = " + height);
     }
 }
